@@ -6,6 +6,9 @@ trustPolicyExclude:
 
 shellEmulator: true
 
+packages:
+  - .
+
 allowBuilds:
   esbuild: true
   vue-demi: true
