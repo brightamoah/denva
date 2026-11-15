@@ -76,17 +76,20 @@ const headerToggle = computed(() => ({
     }"
   >
     <template #title>
-      <div class="flex items-center gap-2 min-w-0 align-middle">
+      <div class="flex items-center gap-2 min-w-0">
         <NuxtImg
           src="/images/logo.png"
           alt="logo"
-          class="size-13 sm:size-16 object-contain shrink-0"
+          class="size-10 sm:size-16 object-contain transition-[width,height] duration-500 shrink-0"
+          :class="scrolled ? 'sm:size-12' : 'sm:size-16'"
         />
 
-        <p class="flex flex-col min-w-0 leading-none">
+        <p class="min-w-0 leading-none">
           <span
-            class="font-serif font-semibold text-primary uppercase tracking-[0.26em] transition-[font-size,letter-spacing] duration-500"
-            :class="scrolled ? 'text-base' : 'text-lg sm:text-xl'"
+            class="block font-serif font-semibold text-primary truncate uppercase transition-[font-size,letter-spacing] duration-500"
+            :class="scrolled
+              ? 'text-sm tracking-[0.18em] sm:text-base sm:tracking-[0.26em]'
+              : 'text-base tracking-[0.16em] sm:text-xl sm:tracking-[0.26em]'"
           >
             Denva <span class="text-secondary">Books</span>
           </span>
@@ -107,49 +110,45 @@ const headerToggle = computed(() => ({
     />
 
     <template #right>
-      <UButton
-        label="Commission"
-        to="/contact"
-        color="secondary"
-        variant="outline"
-        class="hidden sm:inline-flex hover:bg-secondary-700/5 dark:hover:bg-secondary-300/10 px-4 rounded-none ring-secondary-700/40 dark:ring-secondary-300/30 min-h-9 font-normal text-[10px] text-secondary-700 dark:text-secondary-300 uppercase tracking-[0.22em] cursor-pointer"
-      />
+      <div class="flex items-center gap-1 shrink-0">
+        <UButton
+          label="Book A Meeting"
+          to="/contact"
+          color="secondary"
+          variant="outline"
+          class="hidden sm:inline-flex hover:bg-secondary/10 px-4 rounded-none ring-secondary/40 min-h-9 font-normal text-[10px] text-secondary uppercase tracking-[0.22em] cursor-pointer"
+        />
 
-      <UColorModeButton
-        color="neutral"
-        variant="link"
-        class="hidden sm:inline-flex rounded-none text-muted hover:text-highlighted"
-      />
+        <UColorModeButton
+          color="neutral"
+          variant="link"
+          class="rounded-none text-muted hover:text-highlighted"
+        />
+      </div>
     </template>
 
     <template #body>
-      <div class="flex flex-col gap-8 py-4">
-        <UNavigationMenu
-          :items="items"
-          orientation="vertical"
-          highlight
-          variant="pill"
-          color="primary"
-          :ui="{
-            link: 'py-3 text-xs font-light uppercase tracking-[0.24em]',
-          }"
-        />
+      <div class="flex flex-col gap-2 py-6">
+        <NuxtLink
+          v-for="item in items"
+          :key="item.label"
+          :to="item.to"
+          class="block px-4 py-3 border-l-2 font-medium text-sm uppercase tracking-[0.2em] transition-colors duration-200"
+          :class="item.active
+            ? 'border-secondary bg-secondary/10 text-primary dark:text-secondary-300'
+            : 'border-transparent text-muted hover:text-highlighted hover:bg-elevated'"
+        >
+          {{ item.label }}
+        </NuxtLink>
 
         <UButton
-          label="Commission a Volume"
+          label="Book A Meeting"
           to="/contact"
           color="secondary"
-          variant="solid"
-          trailing-icon="i-lucide-arrow-right"
           block
-          class="rounded-none min-h-11 font-medium text-[10px] text-primary-950 uppercase tracking-[0.26em]"
+          trailing-icon="i-lucide-arrow-right"
+          class="mt-6 rounded-none min-h-11 text-[10px] uppercase tracking-[0.26em]"
         />
-
-        <p class="text-[10px] text-muted uppercase leading-relaxed tracking-[0.26em]">
-          By introduction only
-          <span class="mx-2 text-secondary-700 dark:text-secondary-300">·</span>
-          London &amp; New York
-        </p>
       </div>
     </template>
   </UHeader>
