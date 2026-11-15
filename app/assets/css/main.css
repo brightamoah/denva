@@ -1,0 +1,91 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Jost", sans-serif;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --color-denva-blue-50: oklch(0.905 0.048 285.43);
+  --color-denva-blue-100: oklch(0.809 0.1 284.6);
+  --color-denva-blue-200: oklch(0.624 0.204 279.02);
+  --color-denva-blue-300: oklch(0.484 0.29 268.83);
+  --color-denva-blue-400: oklch(0.409 0.282 264.33);
+  --color-denva-blue-500: oklch(0.313 0.215 264.47);
+  --color-denva-blue-600: oklch(0.264 0.18 264.75);
+  --color-denva-blue-700: oklch(0.215 0.146 264.72);
+  --color-denva-blue-800: oklch(0.164 0.112 265.45);
+  --color-denva-blue-900: oklch(0.106 0.074 264.05);
+  --color-denva-blue-950: oklch(0.076 0.053 264.05);
+
+  --color-denva-orange-50: oklch(0.974 0.023 78.21);
+  --color-denva-orange-100: oklch(0.948 0.046 78.84);
+  --color-denva-orange-200: oklch(0.897 0.09 77.11);
+  --color-denva-orange-300: oklch(0.851 0.128 75.93);
+  --color-denva-orange-400: oklch(0.807 0.157 71.77);
+  --color-denva-orange-500: oklch(0.771 0.173 64.82);
+  --color-denva-orange-600: oklch(0.652 0.146 65.28);
+  --color-denva-orange-700: oklch(0.53 0.117 66.84);
+  --color-denva-orange-800: oklch(0.4 0.088 68.05);
+  --color-denva-orange-900: oklch(0.259 0.055 74.43);
+  --color-denva-orange-950: oklch(0.177 0.037 81.57);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--ui-bg);
+    color: var(--ui-text);
+  }
+
+   button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /* Set the serif with the ligatures a printed page would use. */
+  .font-serif {
+    font-feature-settings:
+      "liga" 1,
+      "dlig" 1;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--ui-secondary) 35%, transparent);
+    color: var(--ui-text-highlighted);
+  }
+}
+
+/* Slow, cinematic drift on the hero photography. Disabled by the
+   prefers-reduced-motion block below. */
+@keyframes denva-hero-drift {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.12) translate3d(0, -1.5%, 0);
+  }
+}
+
+.denva-hero-drift {
+  animation: denva-hero-drift 18s var(--ease-out) infinite alternate;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

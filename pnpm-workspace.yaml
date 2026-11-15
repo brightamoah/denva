@@ -1,2 +1,11 @@
+minimumReleaseAgeExcludePrune: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver
+
+shellEmulator: true
+
 allowBuilds:
-  esbuild: set this to true or false
+  esbuild: true
+  vue-demi: true
