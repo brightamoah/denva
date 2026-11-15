@@ -24,6 +24,7 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
+    viteEnvironmentApi: true,
   },
 
   nitro: {
