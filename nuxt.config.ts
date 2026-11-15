@@ -25,4 +25,8 @@ export default defineNuxtConfig({
   experimental: {
     typedPages: true,
   },
+
+  nitro: {
+    preset: "cloudflare-module",
+  },
 });

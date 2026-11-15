@@ -9,3 +9,4 @@ shellEmulator: true
 allowBuilds:
   esbuild: true
   vue-demi: true
+  workerd: true

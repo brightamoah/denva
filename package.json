@@ -22,7 +22,9 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^10.0.0",
+    "@types/node": "^26.6.6",
     "eslint": "^10.14.0",
-    "eslint-plugin-format": "^2.0.1"
+    "eslint-plugin-format": "^2.0.1",
+    "wrangler": "^4.162.0"
   }
 }
