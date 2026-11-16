@@ -22,27 +22,27 @@ useGsapContext(sectionRef, (gsap) => {
 <template>
   <section
     ref="sectionRef"
-    class="border-b border-default bg-muted/60"
+    class="bg-muted/60 border-default border-b"
   >
-    <UContainer class="max-w-4xl py-20 sm:py-28">
+    <UContainer class="py-15 max-w-4xl">
       <div
         data-notes-wrap
         class="relative pt-10 text-center"
       >
         <span
           aria-hidden="true"
-          class="pointer-events-none absolute left-1/2 top-0 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1.5"
+          class="top-0 left-1/2 absolute flex flex-col items-center gap-1.5 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         >
-          <span class="size-1.5 rotate-45 bg-secondary" />
+          <span class="bg-secondary size-1.5 rotate-45" />
 
           <span class="flex gap-2.5">
-            <span class="size-1.5 rotate-45 bg-secondary" />
+            <span class="bg-secondary size-1.5 rotate-45" />
 
-            <span class="size-1.5 rotate-45 bg-secondary" />
+            <span class="bg-secondary size-1.5 rotate-45" />
           </span>
         </span>
 
-        <p class="relative text-[10px] font-normal uppercase tracking-[0.34em] text-muted">
+        <p class="relative font-normal text-[10px] text-muted uppercase tracking-[0.34em]">
           The Denva Charter
         </p>
 
@@ -58,22 +58,22 @@ useGsapContext(sectionRef, (gsap) => {
               dot: 'h-px w-6 rounded-none bg-accented transition-[width,background-color] duration-300 data-[state=active]:w-10 data-[state=active]:bg-secondary',
             }"
           >
-            <figure class="mx-auto max-w-3xl px-2 sm:px-6">
-              <blockquote class="font-serif text-2xl font-light italic leading-snug text-highlighted text-balance sm:text-3xl lg:text-[2.6rem]">
+            <figure class="mx-auto px-2 sm:px-6 max-w-3xl">
+              <blockquote class="font-serif font-light text-highlighted lg:text-[2.6rem] text-2xl sm:text-3xl italic text-balance leading-snug">
                 {{ item.quote }}
               </blockquote>
 
-              <figcaption class="mt-8 flex flex-col items-center">
+              <figcaption class="flex flex-col items-center mt-8">
                 <span
-                  class="h-px w-10 bg-secondary"
+                  class="bg-secondary w-10 h-px"
                   aria-hidden="true"
                 />
 
-                <span class="mt-5 text-[10px] font-normal uppercase tracking-[0.28em] text-highlighted">
+                <span class="mt-5 font-normal text-[10px] text-highlighted uppercase tracking-[0.28em]">
                   {{ item.attribution }}
                 </span>
 
-                <span class="mt-2 text-xs font-light text-muted">
+                <span class="mt-2 font-light text-muted text-xs">
                   {{ item.context }}
                 </span>
               </figcaption>

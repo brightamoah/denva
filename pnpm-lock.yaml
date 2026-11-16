@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@formkit/auto-animate':
+        specifier: ^0.10.2
+        version: 0.10.2
       '@nuxt/image':
         specifier: 2.2.1
         version: 2.2.1(@nuxt/schema@4.6.4)(@types/node@26.6.6)(confbox@0.3.2)(dotenv@17.4.2)(giget@3.3.0)(jiti@2.7.0)(magic-string@1.4.5)(mlly@1.8.2)(oxc-parser@0.140.0)(rolldown@1.2.19)(unplugin@3.7.0(esbuild@0.28.2)(rolldown@1.2.19)(rollup@4.68.2)(vite@8.3.8(@types/node@26.6.6)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)(yaml@2.9.0)))(unstorage@1.17.6(db0@0.3.4)(ioredis@5.11.1(supports-color@10.2.2)))
@@ -789,6 +792,9 @@ packages:
     resolution: {integrity: sha512-043dyEKD9TDSfz080YH2vobubgg+NIo/9Fw4RAl7sEMpD8Am1DNrrSTl/GpMBjyGHoD/FbJY2QLawY+HSQsEIA==}
     peerDependencies:
       vue: '>=3.3.0'
+
+  '@formkit/auto-animate@0.10.2':
+    resolution: {integrity: sha512-t2Z3y8b/zB3wPWwgpc6JDVm4q0ezb5vfe2mqfUrQJ7XziZY8iYuhocQ7eJdTzowRePihrNbZ/DNJoFa6Yi5blg==}
 
   '@humanfs/core@0.19.2':
     resolution: {integrity: sha512-UhXNm+CFMWcbChXywFwkmhqjs3PRCmcSa/hfBgLIb7oQ5HNb1wS0icWsGtSAUNgefHeI+eBrA8I1fxmbHsGdvA==}
@@ -6234,6 +6240,8 @@ snapshots:
       '@floating-ui/dom': 1.8.0
       '@floating-ui/utils': 0.2.12
       vue: 3.5.45(typescript@6.0.3)
+
+  '@formkit/auto-animate@0.10.2': {}
 
   '@humanfs/core@0.19.2':
     dependencies:

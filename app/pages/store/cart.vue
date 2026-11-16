@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <h1>store</h1>
+    <h1>cart</h1>
   </div>
 </template>
 

@@ -36,27 +36,27 @@ useGsapContext(sectionRef, (gsap) => {
 <template>
   <section
     ref="sectionRef"
-    class="border-y border-default bg-muted/60"
+    class="bg-muted/60 border-default border-y"
   >
-    <UContainer class="max-w-7xl py-20 sm:py-28">
-      <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-20">
+    <UContainer class="py-5 pt-15 max-w-7xl">
+      <div class="items-start gap-12 lg:gap-20 grid grid-cols-1 lg:grid-cols-12">
         <div
           data-service-intro
-          class="lg:sticky lg:top-28 lg:col-span-4"
+          class="lg:top-28 lg:sticky lg:col-span-5"
         >
-          <p class="flex items-center gap-3 text-[10px] font-normal uppercase tracking-[0.32em] text-muted">
+          <p class="flex items-center gap-3 font-normal text-[10px] text-muted uppercase tracking-[0.32em]">
             <span
-              class="h-px w-8 bg-secondary"
+              class="bg-secondary w-8 h-px"
               aria-hidden="true"
             />
             The Disciplines
           </p>
 
-          <h2 class="mt-5 font-serif text-4xl font-light leading-[1.05] tracking-tight text-highlighted text-balance sm:text-5xl">
-            From spoken memory to <em class="italic text-primary">archival form.</em>
+          <h2 class="mt-5 font-serif font-light text-highlighted text-4xl sm:text-5xl text-balance leading-[1.05] tracking-tight">
+            From spoken memory to <em class="text-primary italic">archival form.</em>
           </h2>
 
-          <p class="mt-6 text-sm font-light leading-relaxed text-muted text-pretty">
+          <p class="mt-6 font-light text-muted text-sm text-pretty leading-relaxed">
             Every discipline — from discreet ghostwriting interviews to European bindery production
             and global trade distribution — is stewarded under one roof.
           </p>
@@ -67,44 +67,38 @@ useGsapContext(sectionRef, (gsap) => {
             color="neutral"
             variant="outline"
             trailing-icon="i-lucide-arrow-right"
-            class="mt-8 min-h-11 cursor-pointer rounded-none px-6 text-[10px] font-light uppercase tracking-[0.24em]"
+            class="mt-8 px-6 rounded-none min-h-11 font-light text-[10px] uppercase tracking-[0.24em] cursor-pointer"
           />
-
-          <p class="mt-10 border-t border-default pt-5 text-[10px] font-light uppercase leading-relaxed tracking-[0.24em] text-muted">
-            Twelve commissions
-            <span class="mx-1.5 text-secondary-700 dark:text-secondary-300">·</span>
-            One atelier
-          </p>
         </div>
 
         <div
           data-service-list
-          class="border-t border-default lg:col-span-8"
+          class="lg:col-span-7 border-default border-t"
         >
           <NuxtLink
             v-for="service in services"
             :key="service.number"
             data-service-row
             :to="service.to"
-            class="group -mx-4 grid grid-cols-[2.5rem_1fr_auto] items-start gap-4 border-b border-default px-4 py-7 transition-colors duration-300 hover:bg-default focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-primary sm:grid-cols-[3.5rem_1fr_auto] sm:gap-6"
+            class="group items-start gap-4 sm:gap-6 grid grid-cols-[2.5rem_1fr_auto] sm:grid-cols-[3.5rem_1fr_auto] hover:bg-default -mx-4 px-4 py-7 border-default last:border-0 border-b focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-0 transition-colors duration-300"
           >
-            <span class="font-serif text-xl font-light italic leading-none text-secondary-700 tabular-nums dark:text-secondary-300 sm:text-2xl">
+            <span class="font-serif font-light tabular-nums text-secondary-700 dark:text-secondary-300 text-xl sm:text-2xl italic leading-none">
               {{ service.number }}
             </span>
 
             <div class="min-w-0">
-              <h3 class="font-serif text-2xl font-light tracking-tight text-highlighted transition-colors duration-300 group-hover:text-primary sm:text-[1.7rem]">
+              <h3 class="font-serif font-light text-highlighted sm:text-[1.7rem] group-hover:text-primary text-2xl tracking-tight transition-colors duration-300">
                 {{ service.title }}
               </h3>
 
-              <p class="mt-2 max-w-xl text-sm font-light leading-relaxed text-muted text-pretty">
+              <p class="mt-2 max-w-xl font-light text-muted text-sm text-pretty leading-relaxed">
                 {{ service.summary }}
               </p>
             </div>
 
             <UIcon
               name="i-lucide-arrow-right"
-              class="mt-2 size-4 shrink-0 text-muted transition-[color,transform] duration-300 group-hover:translate-x-1 group-hover:text-primary"
+              class="mt-2 size-4 text-muted group-hover:text-primary transition-[color,transform] group-hover:translate-x-1 duration-300 shrink-0"
               aria-hidden="true"
             />
           </NuxtLink>

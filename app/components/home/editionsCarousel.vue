@@ -39,7 +39,7 @@ useGsapContext(sectionRef, (gsap) => {
     ref="sectionRef"
     class="bg-default overflow-x-clip"
   >
-    <UContainer class="py-15 sm:pt-20 max-w-7xl">
+    <UContainer class="pt-15 max-w-7xl">
       <div
         data-editions-header
         class="flex lg:flex-row flex-col lg:justify-between lg:items-end gap-8 pb-10 border-default border-b"
@@ -57,11 +57,6 @@ useGsapContext(sectionRef, (gsap) => {
             Editions crafted to <em class="text-primary italic">endure.</em>
           </h2>
         </div>
-
-        <p class="max-w-sm font-light text-muted text-sm text-pretty leading-relaxed">
-          Intimate private memoirs bound in Belgian linen and museum-grade monographs, produced in
-          strictly numbered runs.
-        </p>
       </div>
 
       <div
@@ -69,7 +64,7 @@ useGsapContext(sectionRef, (gsap) => {
         class="relative mt-12 pb-12"
       >
         <UCarousel
-          v-slot="{ item, index }"
+          v-slot="{ item }"
           loop
           arrows
           dots
@@ -79,13 +74,13 @@ useGsapContext(sectionRef, (gsap) => {
             variant: 'outline',
             color: 'neutral',
             class:
-              'size-11 rounded-none bg-default text-muted ring-default hover:text-primary sm:!-start-5 cursor-pointer',
+              'size-11 rounded-none bg-default text-muted flex items-center justify-center text-center ring-default hover:text-primary sm:-inset-s-5! cursor-pointer',
           }"
           :next="{
             variant: 'outline',
             color: 'neutral',
             class:
-              'size-11 rounded-none bg-default text-muted ring-default hover:text-primary sm:!-end-5 cursor-pointer',
+              'size-11 rounded-none bg-default text-muted ring-default flex items-center justify-center text-center hover:text-primary sm:-inset-e-5! cursor-pointer',
           }"
           :ui="{
             item: 'basis-[86%] sm:basis-1/2 lg:basis-1/3',
@@ -125,10 +120,6 @@ useGsapContext(sectionRef, (gsap) => {
                   class="absolute inset-0 bg-linear-to-t from-primary-950/75 via-primary-950/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 />
 
-                <span class="top-4 left-4 absolute font-serif text-primary-50/90 text-sm italic">
-                  Nº {{ String(index + 1).padStart(2, "0") }}
-                </span>
-
                 <span class="bottom-4 left-4 absolute flex items-center gap-2 opacity-0 group-hover:opacity-100 font-light text-[10px] text-primary-50 uppercase tracking-[0.26em] transition-[opacity,transform] translate-y-1 group-hover:translate-y-0 duration-500">
                   View edition
                   <UIcon
@@ -157,9 +148,9 @@ useGsapContext(sectionRef, (gsap) => {
                 />
               </div>
 
-              <p class="mt-2 font-light text-muted text-xs italic leading-relaxed">
+              <!-- <p class="mt-2 font-light text-muted text-xs leading-relaxed">
                 {{ item.specification }}
-              </p>
+              </p> -->
             </article>
           </NuxtLink>
         </UCarousel>

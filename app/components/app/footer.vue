@@ -2,9 +2,9 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 
 const items: NavigationMenuItem[] = [
-  { label: "Disciplines", to: "/services" },
-  { label: "Editions", to: "/store" },
-  { label: "Atelier", to: "/about" },
+  { label: "Services", to: "/services" },
+  { label: "Store", to: "/store" },
+  { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
 </script>
@@ -18,16 +18,12 @@ const items: NavigationMenuItem[] = [
     >
       <template #left>
         <div class="flex flex-col gap-2">
-          <span class="font-serif text-lg font-light uppercase tracking-[0.26em] text-highlighted">
+          <span class="font-serif font-light text-highlighted text-lg uppercase tracking-[0.26em]">
             Denva <span class="text-secondary-700 dark:text-secondary-300">Books</span>
           </span>
 
-          <span class="text-[10px] font-light uppercase tracking-[0.24em] text-muted">
+          <span class="font-light text-[10px] text-muted uppercase tracking-[0.24em]">
             © {{ new Date().getFullYear() }} · Bespoke Publishing &amp; Ghostwriting
-          </span>
-
-          <span class="text-[9px] font-light uppercase tracking-[0.24em] text-muted">
-            Set in Cormorant Garamond &amp; Jost
           </span>
         </div>
       </template>
@@ -43,17 +39,13 @@ const items: NavigationMenuItem[] = [
 
       <template #right>
         <div class="flex items-center gap-5">
-          <span class="hidden text-[9px] font-light uppercase tracking-[0.22em] text-muted lg:block">
-            London &amp; New York
-          </span>
-
           <UButton
             label="Inquire"
             to="/contact"
             color="secondary"
             variant="outline"
             trailing-icon="i-lucide-arrow-right"
-            class="min-h-11 cursor-pointer rounded-none px-4 text-[10px] font-light uppercase tracking-[0.22em] text-secondary-700 ring-secondary-700/40 hover:bg-secondary-700/5 dark:text-secondary-300 dark:ring-secondary-300/30 dark:hover:bg-secondary-300/10"
+            class="hover:bg-secondary-700/5 dark:hover:bg-secondary-300/10 px-4 rounded-none ring-secondary-700/40 dark:ring-secondary-300/30 min-h-11 font-light text-[10px] text-secondary-700 dark:text-secondary-300 uppercase tracking-[0.22em] cursor-pointer"
           />
         </div>
       </template>

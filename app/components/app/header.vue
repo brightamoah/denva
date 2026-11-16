@@ -31,6 +31,8 @@ const items = computed<NavigationMenuItem[]>(() => [
   },
 ]);
 
+const isStoreRoute = computed(() => route.path.startsWith("/store"));
+
 const scrolled = ref(false);
 
 function onScroll() {
@@ -110,7 +112,28 @@ const headerToggle = computed(() => ({
     />
 
     <template #right>
-      <div class="flex items-center gap-1 shrink-0">
+      <div class="flex items-center gap-3 shrink-0">
+        <div v-if="isStoreRoute">
+          <UChip
+            v-auto-animate
+            inset
+            size="3xl"
+            text="17"
+            color="secondary"
+            :ui="{
+              base: 'text-[10px] text-center size-4',
+            }"
+          >
+            <UButton
+              v-auto-animate
+              icon="i-lucide:shopping-cart"
+              variant="link"
+              color="neutral"
+              to="/store/cart"
+            />
+          </UChip>
+        </div>
+
         <UButton
           label="Book A Meeting"
           to="/contact"

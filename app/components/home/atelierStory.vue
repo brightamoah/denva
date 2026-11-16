@@ -46,15 +46,15 @@ useGsapContext(sectionRef, (gsap) => {
 <template>
   <section
     ref="sectionRef"
-    class="border-b border-default bg-default"
+    class="bg-default border-default border-b"
   >
-    <UContainer class="max-w-7xl py-20 sm:py-28">
-      <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-20">
+    <UContainer class="py-15 max-w-7xl">
+      <div class="items-center gap-14 lg:gap-20 grid grid-cols-1 lg:grid-cols-12">
         <figure
           data-atelier-image
           class="relative order-1 lg:col-span-6"
         >
-          <div class="aspect-4/5 overflow-hidden bg-muted">
+          <div class="bg-muted aspect-4/5 overflow-hidden">
             <NuxtImg
               src="/images/atelier-craft.jpg"
               alt="Denva Books bookbinding workbench with cotton manuscript pages, fountain pen, and linen swatches"
@@ -62,16 +62,16 @@ useGsapContext(sectionRef, (gsap) => {
               height="896"
               format="webp"
               loading="lazy"
-              class="h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
+              class="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-700 ease-out"
             />
           </div>
 
-          <figcaption class="relative mx-6 -mt-12 border border-default bg-default p-5 shadow-sm sm:mx-10 sm:p-6">
-            <p class="font-serif text-lg font-light italic leading-snug text-highlighted sm:text-xl">
+          <figcaption class="relative bg-default shadow-sm mx-6 sm:mx-10 -mt-12 p-5 sm:p-6 border border-default">
+            <p class="font-serif font-light text-highlighted text-lg sm:text-xl italic leading-snug">
               “Paper, thread, and proportion — the quiet architecture of a memory.”
             </p>
 
-            <p class="mt-3 text-[9px] font-normal uppercase tracking-[0.28em] text-muted">
+            <p class="mt-3 font-normal text-[9px] text-muted uppercase tracking-[0.28em]">
               The Denva Bindery
             </p>
           </figcaption>
@@ -80,10 +80,10 @@ useGsapContext(sectionRef, (gsap) => {
         <div class="order-2 lg:col-span-6">
           <p
             data-atelier-copy
-            class="flex items-center gap-3 text-[10px] font-normal uppercase tracking-[0.32em] text-muted"
+            class="flex items-center gap-3 font-normal text-[10px] text-muted uppercase tracking-[0.32em]"
           >
             <span
-              class="h-px w-8 bg-secondary"
+              class="bg-secondary w-8 h-px"
               aria-hidden="true"
             />
             The Atelier Process
@@ -91,14 +91,14 @@ useGsapContext(sectionRef, (gsap) => {
 
           <h2
             data-atelier-copy
-            class="mt-5 font-serif text-4xl font-light leading-[1.05] tracking-tight text-highlighted text-balance sm:text-5xl"
+            class="mt-5 font-serif font-light text-highlighted text-4xl sm:text-5xl text-balance leading-[1.05] tracking-tight"
           >
-            Unhurried prose. <em class="italic text-primary">Tactile permanence.</em>
+            Unhurried prose. <em class="text-primary italic">Tactile permanence.</em>
           </h2>
 
           <p
             data-atelier-copy
-            class="mt-6 max-w-xl text-sm font-light leading-relaxed text-muted text-pretty"
+            class="mt-6 max-w-xl font-light text-muted text-sm text-pretty leading-relaxed"
           >
             Whether authoring a public cultural statement or a confidential family history, our
             writers and master bookbinders collaborate with quiet precision.
@@ -106,23 +106,23 @@ useGsapContext(sectionRef, (gsap) => {
 
           <ol
             data-atelier-copy
-            class="mt-10 border-t border-default"
+            class="mt-10 border-default border-t"
           >
             <li
               v-for="stage in stages"
               :key="stage.title"
-              class="grid grid-cols-[2.5rem_1fr] gap-4 border-b border-default py-5 sm:grid-cols-[3.25rem_1fr] sm:gap-6"
+              class="gap-4 sm:gap-6 grid grid-cols-[2.5rem_1fr] sm:grid-cols-[3.25rem_1fr] py-5 border-default border-b"
             >
-              <span class="font-serif text-lg font-light italic leading-none text-secondary-700 dark:text-secondary-300">
+              <span class="font-serif font-light text-secondary-700 dark:text-secondary-300 text-lg italic leading-none">
                 {{ stage.numeral }}
               </span>
 
               <div class="min-w-0">
-                <h3 class="font-serif text-xl font-light tracking-tight text-highlighted sm:text-2xl">
+                <h3 class="font-serif font-light text-highlighted text-xl sm:text-2xl tracking-tight">
                   {{ stage.title }}
                 </h3>
 
-                <p class="mt-1.5 max-w-lg text-sm font-light leading-relaxed text-muted text-pretty">
+                <p class="mt-1.5 max-w-lg font-light text-muted text-sm text-pretty leading-relaxed">
                   {{ stage.description }}
                 </p>
               </div>
@@ -139,7 +139,7 @@ useGsapContext(sectionRef, (gsap) => {
               color="neutral"
               variant="outline"
               trailing-icon="i-lucide-arrow-right"
-              class="min-h-11 cursor-pointer rounded-none px-6 text-[10px] font-light uppercase tracking-[0.24em]"
+              class="px-6 rounded-none min-h-11 font-light text-[10px] uppercase tracking-[0.24em] cursor-pointer"
             />
           </div>
         </div>

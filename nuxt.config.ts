@@ -2,7 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: "latest",
 
-  modules: ["@nuxt/ui", "@nuxt/image"],
+  modules: [
+    "@nuxt/ui",
+    "@nuxt/image",
+    "@formkit/auto-animate/nuxt",
+  ],
 
   devtools: { enabled: true },
 

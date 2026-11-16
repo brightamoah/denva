@@ -21,41 +21,41 @@ useGsapContext(sectionRef, (gsap) => {
 <template>
   <section
     ref="sectionRef"
-    class="relative isolate overflow-hidden bg-primary-950 text-primary-50"
+    class="isolate relative bg-primary-950 overflow-hidden text-primary-50"
   >
     <span
       aria-hidden="true"
-      class="pointer-events-none absolute -right-10 top-1/2 hidden -translate-y-1/2 select-none font-serif text-[22rem] font-light leading-none text-primary-50/5 lg:block"
+      class="hidden lg:block top-1/2 -right-10 absolute font-serif font-light text-[22rem] text-primary-50/5 leading-none -translate-y-1/2 pointer-events-none select-none"
     >
       XII
     </span>
 
-    <UContainer class="relative max-w-4xl py-24 text-center sm:py-32">
+    <UContainer class="relative py-20 max-w-4xl text-center">
       <p
         data-cta-wrap
-        class="flex items-center justify-center gap-3 text-[10px] font-normal uppercase tracking-[0.34em] text-secondary-300"
+        class="flex justify-center items-center gap-3 font-normal text-[10px] text-secondary-300 uppercase tracking-[0.34em]"
       >
         <span
-          class="h-px w-8 bg-secondary"
+          class="bg-secondary w-8 h-px"
           aria-hidden="true"
         />
         Private Commissions
         <span
-          class="h-px w-8 bg-secondary"
+          class="bg-secondary w-8 h-px"
           aria-hidden="true"
         />
       </p>
 
       <h2
         data-cta-wrap
-        class="mt-6 font-serif text-4xl font-light leading-[1.05] tracking-tight text-primary-50 text-balance sm:text-5xl lg:text-6xl"
+        class="mt-6 font-serif font-light text-primary-50 text-4xl sm:text-5xl lg:text-6xl text-balance leading-[1.05] tracking-tight"
       >
-        Begin your manuscript <em class="italic text-secondary-300">in confidence.</em>
+        Begin your manuscript <em class="text-secondary-300 italic">in confidence.</em>
       </h2>
 
       <p
         data-cta-wrap
-        class="mx-auto mt-6 max-w-xl text-sm font-light leading-relaxed text-primary-100/70 text-pretty sm:text-base"
+        class="mx-auto mt-6 max-w-xl font-light text-primary-100/70 text-sm sm:text-base text-pretty leading-relaxed"
       >
         Denva Books accepts twelve bespoke publishing and ghostwriting commissions each year.
         Arrange an introductory dialogue with our Managing Editorial Partner.
@@ -63,7 +63,7 @@ useGsapContext(sectionRef, (gsap) => {
 
       <div
         data-cta-wrap
-        class="mt-10 flex justify-center"
+        class="flex justify-center mt-10"
       >
         <UButton
           label="Arrange a private consultation"
@@ -71,16 +71,9 @@ useGsapContext(sectionRef, (gsap) => {
           color="secondary"
           variant="solid"
           trailing-icon="i-lucide-arrow-right"
-          class="min-h-12 cursor-pointer rounded-none px-9 text-[11px] font-medium uppercase tracking-[0.24em] text-primary-950 hover:bg-secondary-400 active:bg-secondary-400 focus-visible:outline-3 focus-visible:outline-secondary-100"
+          class="hover:bg-secondary-400 active:bg-secondary-400 px-9 rounded-none focus-visible:outline-3 focus-visible:outline-secondary-100 min-h-12 font-medium text-[11px] text-primary-950 uppercase tracking-[0.24em] cursor-pointer"
         />
       </div>
-
-      <p
-        data-cta-wrap
-        class="mt-10 text-[9px] font-light uppercase tracking-[0.3em] text-primary-100/70"
-      >
-        By introduction <span class="mx-2 text-secondary">·</span> London &amp; New York
-      </p>
     </UContainer>
   </section>
 </template>

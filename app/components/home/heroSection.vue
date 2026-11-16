@@ -25,7 +25,7 @@ const activeSlide = computed(() => heroSlides[activeIndex.value] ?? heroSlides[0
 
 const links: ButtonProps[] = [
   {
-    label: "Commission a Volume",
+    label: "Start your story",
     to: "/contact",
     color: "secondary",
     variant: "solid",
@@ -34,7 +34,7 @@ const links: ButtonProps[] = [
       "min-h-12 rounded-none px-8 text-[11px] font-medium uppercase tracking-[0.24em] text-primary-950 hover:bg-secondary-400 active:bg-secondary-400 focus-visible:outline-3 focus-visible:outline-secondary-100",
   },
   {
-    label: "Explore the Disciplines",
+    label: "Explore our services",
     to: "/services",
     color: "primary",
     variant: "outline",
@@ -160,23 +160,8 @@ useGsapContext(heroRef, (gsap) => {
       class="-z-10 absolute inset-0 bg-linear-to-r from-primary-950/85 via-primary-950/30 to-transparent pointer-events-none"
     />
 
-    <div class="z-10 relative flex flex-col flex-1 justify-end lg:justify-center mx-auto px-4 sm:px-6 pt-20 lg:pt-24 w-full max-w-7xl">
+    <div class="z-10 relative flex flex-col flex-1 justify-end lg:justify-center mx-auto px-4 sm:px-6 pt-0 lg:pt-24 w-full max-w-7xl">
       <div class="pb-14 lg:pb-24 max-w-3xl">
-        <div
-          data-hero-fade
-          class="flex items-center gap-4"
-        >
-          <span
-            data-hero-rule
-            class="block bg-secondary w-12 h-px"
-            aria-hidden="true"
-          />
-
-          <p class="font-light text-[10px] text-primary-100 uppercase tracking-[0.34em]">
-            Denva Books · A Private Publishing Atelier
-          </p>
-        </div>
-
         <h1 class="mt-7 font-serif font-light text-[2.9rem] text-primary-50 xl:text-[5.4rem] sm:text-6xl lg:text-7xl text-balance leading-[0.98] tracking-[-0.015em]">
           <span class="block pb-1">
             <span
@@ -197,7 +182,7 @@ useGsapContext(heroRef, (gsap) => {
 
         <p
           data-hero-fade
-          class="mt-7 max-w-xl font-sans font-light text-primary-100/80 text-base sm:text-lg text-pretty leading-relaxed"
+          class="mt-7 max-w-xl font-light text-primary-50/80 text-base sm:text-lg text-pretty leading-relaxed"
         >
           Confidential ghostwriting, editorial direction, and heirloom hardcover publishing for
           founders, collectors, and cultural houses.
@@ -223,11 +208,11 @@ useGsapContext(heroRef, (gsap) => {
           data-hero-fade
           class="max-w-md"
         >
-          <p class="font-light text-[10px] text-primary-100/75 uppercase tracking-[0.3em]">
+          <p class="font-light text-[10px] text-primary-50/75 uppercase tracking-[0.3em]">
             {{ activeSlide.title }}
           </p>
 
-          <p class="mt-2 font-serif font-light text-primary-50/90 text-lg italic">
+          <p class="mt-2 font-serif font-light text-primary-50/90 text-lg">
             {{ activeSlide.caption }}
           </p>
         </div>
