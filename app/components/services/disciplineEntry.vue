@@ -29,15 +29,15 @@ useSectionReveal(entryRef, {
         class="lg:col-span-5 bg-muted overflow-hidden"
         :class="imageFirst ? '' : 'lg:order-2'"
       >
-        <div class="aspect-4/3 lg:aspect-4/5 overflow-hidden">
+        <div class="aspect-4/3 lg:aspect-4/4 overflow-hidden">
           <NuxtImg
             :src="props.service.image"
             :alt="props.service.alt"
-            width="896"
+            width="960"
             height="1120"
             format="webp"
-            loading="lazy"
-            class="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-700 ease-out"
+            loading="eager"
+            class="w-full h-full object-center object-cover"
           />
         </div>
       </figure>
@@ -74,10 +74,10 @@ useSectionReveal(entryRef, {
           <li
             v-for="item in props.service.includes"
             :key="item"
-            class="flex gap-3 font-normal text-muted text-sm leading-relaxed"
+            class="flex gap-3 font-normal text-muted text-base leading-relaxed"
           >
             <span
-              class="bg-secondary mt-2 size-2 rotate-45 shrink-0"
+              class="bg-secondary mt-2 size-2.5 rotate-45 shrink-0"
               aria-hidden="true"
             />
 

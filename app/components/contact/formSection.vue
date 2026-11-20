@@ -69,8 +69,9 @@ function onCreate(item: string) {
 
 <template>
   <section
+    id="contact-form"
     ref="sectionRef"
-    class="bg-muted/60 border-default border-b"
+    class="bg-muted/60 border-default border-b scroll-mt-24"
   >
     <UContainer class="py-15 max-w-7xl">
       <div class="gap-12 lg:gap-20 grid lg:grid-cols-12">

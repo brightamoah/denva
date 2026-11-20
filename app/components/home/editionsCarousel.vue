@@ -36,8 +36,9 @@ useGsapContext(sectionRef, (gsap) => {
 
 <template>
   <section
+    id="editions"
     ref="sectionRef"
-    class="bg-default overflow-x-clip"
+    class="bg-default overflow-x-clip scroll-mt-24"
   >
     <UContainer class="pt-15 max-w-7xl">
       <div

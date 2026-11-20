@@ -18,6 +18,7 @@ export interface SocialLink {
 export const contactEmail = "denvabooksgh@gmail.com";
 export const contactPhone = "+233 55 222 3232";
 export const contactPhoneAlt = "053 885 9406";
+export const contactPhoneThird = "0277 55 11043";
 
 export const contactTopics = [
   "Ghostwriting",
@@ -33,6 +34,7 @@ export const contactFacts: ContactFact[] = [
   { label: "Email", value: contactEmail, href: `mailto:${contactEmail}` },
   { label: "Phone / WhatsApp", value: contactPhone, href: "tel:+233552223232" },
   { label: "Second line", value: contactPhoneAlt, href: "tel:+233538859406" },
+  { label: "Third line", value: contactPhoneThird, href: "tel:+2332775511043" },
   { label: "Location", value: "Accra, Ghana" },
 ];
 

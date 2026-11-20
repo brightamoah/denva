@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  id?: string;
   eyebrow?: string;
   title?: string;
   accent?: string;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  id: "closing-cta",
   eyebrow: "Start Your Book",
   title: "Ready to publish?",
   accent: "Let's talk.",
@@ -30,8 +32,9 @@ useSectionReveal(sectionRef, {
 
 <template>
   <section
+    :id="props.id"
     ref="sectionRef"
-    class="isolate relative bg-primary-800 overflow-hidden text-primary-50"
+    class="isolate relative bg-primary-800 overflow-hidden text-primary-50 scroll-mt-24"
   >
     <UContainer class="relative py-20 max-w-4xl text-center">
       <p

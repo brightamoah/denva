@@ -19,14 +19,18 @@ useSectionReveal(sectionRef, {
 
 <template>
   <div>
-    <AppPageHeader title="Store" />
+    <!-- <AppPageHeader
+      id="store-header"
+      title="Store"
+    /> -->
 
     <section
+      id="store-catalog"
       ref="sectionRef"
-      class="bg-default"
+      class="bg-default scroll-mt-24"
     >
-      <UContainer class="py-10 sm:py-12 max-w-7xl">
-        <div class="gap-x-5 gap-y-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+      <UContainer class="py-8 sm:py-10 max-w-7xl">
+        <div class="gap-4 sm:gap-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
           <StoreProductTile
             v-for="edition in storeEditions"
             :key="edition.id"

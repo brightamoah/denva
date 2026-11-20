@@ -3,7 +3,10 @@ import { marqueeItems } from "~/data/home";
 </script>
 
 <template>
-  <div class="bg-primary-800 py-4 border-primary-50/10 border-t text-primary-100">
+  <div
+    id="imprint"
+    class="bg-primary-800 py-4 border-primary-50/10 border-t text-primary-100 scroll-mt-24"
+  >
     <UMarquee
       pause-on-hover
       :repeat="4"

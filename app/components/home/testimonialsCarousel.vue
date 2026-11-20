@@ -21,8 +21,9 @@ useGsapContext(sectionRef, (gsap) => {
 
 <template>
   <section
+    id="core-values"
     ref="sectionRef"
-    class="bg-muted/60 border-default border-b"
+    class="bg-muted/60 border-default border-b scroll-mt-24"
   >
     <UContainer class="py-15 max-w-4xl">
       <div

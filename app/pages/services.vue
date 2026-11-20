@@ -12,26 +12,25 @@ useSeoMeta({
 
 <template>
   <div>
-    <AppPageHeader
-      title="Everything your book needs,"
-      accent="in one place."
-      description="Writing, editing, design, ISBN and printing, handled by one team in Accra from the first idea to the finished book."
-    />
-
     <ServicesDisciplineList />
 
+    <ServicesPackagesSection />
+
     <ServicesProcessSection />
+
+    <!-- <ServicesMaterialsSection /> -->
 
     <ServicesFaqSection />
 
     <AppClosingCta
+      id="services-cta"
       eyebrow="Start Your Book"
       title="Not sure what you need?"
       accent="Tell us where the book is."
       description="Send a short note, whether you have an idea, a manuscript or a finished file, and we will explain the next step and give you a clear quote."
       label="Get a quote"
       to="/contact"
-      note="Accra, Ghana · denvabooksgh@gmail.com"
+      note=""
     />
   </div>
 </template>

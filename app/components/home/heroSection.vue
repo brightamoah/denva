@@ -103,8 +103,9 @@ useGsapContext(heroRef, (gsap) => {
 
 <template>
   <section
+    id="hero"
     ref="heroRef"
-    class="isolate relative flex flex-col bg-primary-950 min-h-[calc(100dvh-5rem)] overflow-hidden text-primary-50"
+    class="isolate relative flex flex-col bg-primary-950 min-h-[calc(100dvh-5rem)] overflow-hidden text-primary-50 scroll-mt-24"
   >
     <!-- Full-bleed photography -->
     <div

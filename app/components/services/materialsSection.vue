@@ -21,17 +21,18 @@ const swatches: Record<MaterialTone, string> = {
 
 <template>
   <section
+    id="printing-specifications"
     ref="sectionRef"
-    class="bg-default border-default border-b"
+    class="bg-default border-default border-b scroll-mt-24"
   >
-    <UContainer class="py-15 max-w-7xl">
+    <UContainer class="py-14 sm:py-16 max-w-7xl">
       <div class="flex lg:flex-row flex-col lg:justify-between lg:items-end gap-6">
         <AppSectionHeading
-          eyebrow="Printing"
-          description="Paper, size and finish are chosen per project. We print from 300 copies and quote on the specifications."
+          eyebrow="Printing Standards"
+          description="High digital printing technology, archival paper choices and durable finishes tailored to your book's vision. Printed from 300 copies."
           data-reveal
         >
-          Printed the way <span class="text-accent">you want it.</span>
+          Quality printing with <span class="text-accent">attention to detail.</span>
         </AppSectionHeading>
       </div>
 

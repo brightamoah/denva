@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  id?: string;
   eyebrow?: string;
   title: string;
   accent?: string;
@@ -7,6 +8,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
+  id: "page-header",
   eyebrow: "",
   accent: "",
   description: "",
@@ -14,7 +16,10 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <section class="bg-default border-default border-b">
+  <section
+    :id="props.id"
+    class="bg-default border-default border-b scroll-mt-24"
+  >
     <UContainer class="py-8 sm:py-10 max-w-7xl">
       <AppEyebrowLabel
         v-if="props.eyebrow"
@@ -25,7 +30,7 @@ const props = withDefaults(defineProps<Props>(), {
         {{ props.title }}
         <span
           v-if="props.accent"
-          class="text-accent"
+          class="text-accent ml-1.5"
         >{{ props.accent }}</span>
       </h1>
 

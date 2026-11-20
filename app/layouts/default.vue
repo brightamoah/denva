@@ -17,5 +17,7 @@
     </UMain>
 
     <AppFooter />
+
+    <AppScrollToTop />
   </div>
 </template>

@@ -8,6 +8,13 @@ export interface ServiceDetail {
   alt: string;
 }
 
+export interface GhostwritingPackage {
+  name: string;
+  pages: string;
+  price: string;
+  timeline: string;
+}
+
 export interface ServiceProcessStep {
   number: string;
   title: string;
@@ -33,24 +40,19 @@ export interface ServiceFaq {
   content: string;
 }
 
-/**
- * The six services Denva actually offers, in the order most authors meet
- * them. Copy is kept to one line where possible; the detail lives in the
- * four-item "includes" list.
- */
 export const serviceDetails: ServiceDetail[] = [
   {
     slug: "ghostwriting",
     title: "Ghostwriting & Autobiography",
     summary:
-      "Your story, written in your voice, from a rough idea, notes or recordings to a finished manuscript.",
+      "Bring your life story, memoir, business insights or novel to life in your authentic voice. We handle interviews, transcription, drafting and revisions under a confidential Non-Disclosure Agreement.",
     includes: [
-      "Discovery meeting and concept outline",
-      "Interviews, notes and transcription",
-      "Chapter drafts with your feedback",
-      "Editing and proofreading before delivery",
+      "Autobiography, memoir, business and non-fiction ghostwriting",
+      "Confidential discovery meeting and concept outline roadmap",
+      "Interviews, notes gathering and audio transcription",
+      "Regular chapter drafts with multiple revision rounds",
     ],
-    timeline: "3–12 months, depending on length",
+    timeline: "3 to 12 months, depending on page count",
     image: "/images/book-memoir.jpg",
     alt: "A light-coloured hardcover book resting on a stone surface",
   },
@@ -58,27 +60,27 @@ export const serviceDetails: ServiceDetail[] = [
     slug: "editing",
     title: "Manuscript Review, Editing & Proofreading",
     summary:
-      "A professional review of substance, logic, coherence, clarity and grammar, followed by editing and a final proofread.",
+      "A thorough five-area manuscript review covering substance, logic, coherence, clarity and grammar, followed by professional editing and a final quality check before print.",
     includes: [
-      "Five-area manuscript review report",
-      "Structural and line editing",
-      "Proofreading after layout",
-      "Clean, print-ready files",
+      "Five-area manuscript review report with actionable feedback",
+      "Structural, developmental and line-by-line editing",
+      "Language, flow, sentence construction and clarity refinement",
+      "Thorough proofreading for grammar, spelling and typographical accuracy",
     ],
-    timeline: "Agreed around your manuscript",
+    timeline: "Agreed around your manuscript length",
     image: "/images/atelier-craft.jpg",
     alt: "Printed manuscript pages, a pen and bookbinding tools on a workbench",
   },
   {
     slug: "design",
-    title: "Cover Design & Interior Layout",
+    title: "Book Cover Design & Interior Layout",
     summary:
-      "A cover that fits the book, and an interior that is comfortable to read from the first page to the last.",
+      "A captivating book cover crafted to attract readers, paired with an interior layout formatted with comfortable margins, elegant typography and balanced chapter styling.",
     includes: [
-      "Cover design from your brief",
-      "Page size, margins and typography",
-      "Chapter styles and front/back matter",
-      "Print-ready layout files",
+      "Custom cover design aligned with your genre and creative vision",
+      "Interior page layout, margins, paragraph styles and typography",
+      "Front matter, table of contents, headers, footers and back matter",
+      "High digital print-ready files and digital publishing formats",
     ],
     timeline: "Agreed per project",
     image: "/images/book-edition.jpg",
@@ -86,14 +88,14 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "publishing",
-    title: "ISBN & Publishing Preparation",
+    title: "ISBN Assistance & Publishing Preparation",
     summary:
-      "ISBN assistance, formatting and the final checks your files need before printing or digital release.",
+      "ISBN registration guidance, barcode generation and complete digital publishing support to prepare your book for print and online readers.",
     includes: [
-      "ISBN guidance and assistance",
-      "Digital publishing preparation",
-      "Amazon Kindle upload support",
-      "Final pre-press checks",
+      "ISBN guidance and official registration assistance",
+      "Pre-press quality checks and print file preparation",
+      "Amazon Kindle formatting and upload assistance",
+      "Author-owned publishing accounts with full copyright retention",
     ],
     timeline: "Agreed per project",
     image: "/images/book-monograph.jpg",
@@ -101,29 +103,29 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "printing",
-    title: "Book Printing",
+    title: "Book Printing Services",
     summary:
-      "High digital printing from 300 copies, in A5, A4 or a custom size, on paper and finish you choose.",
+      "Premium physical book production utilizing advanced high digital printing technology for crisp, sharp text and vibrant images, printed from 300 copies.",
     includes: [
-      "White or creamish bond paper",
-      "Matte or gloss lamination",
-      "Perfect binding or hardcover",
-      "9–15 business days standard",
+      "Mechanized brownish or creamish bond paper and white bond paper",
+      "Matte lamination and gloss lamination cover finishes",
+      "Perfect binding and durable hardcover binding styles",
+      "Standard sizes like A5 and A4 or custom dimensions",
     ],
-    timeline: "9–15 business days (expedited available)",
+    timeline: "9 to 15 business days standard, expedited available",
     image: "/images/hero-athena.jpg",
     alt: "A stack of printed hardcover books and a fountain pen on a desk",
   },
   {
     slug: "launch",
-    title: "Book Launch & Marketing",
+    title: "Book Launch & Marketing Support",
     summary:
-      "Launch planning, branded materials and practical marketing support, so the book gets a proper send-off.",
+      "Consultation, planning and promotional execution to give your book a successful send-off, including custom launch collateral and social media marketing support.",
     includes: [
-      "Launch consultation and planning",
-      "Banners, backdrops and branded materials",
-      "Promotional and social media content",
-      "Kindle and digital publishing support",
+      "Book launch consultation, planning and event execution support",
+      "Branded pull-up banners, backdrops, paper bags and t-shirts",
+      "Promotional social media artwork and digital announcement materials",
+      "Marketing advisory to help build your author profile and reach readers",
     ],
     timeline: "Planned around your launch date",
     image: "/images/book-chronicle.jpg",
@@ -131,95 +133,159 @@ export const serviceDetails: ServiceDetail[] = [
   },
 ];
 
+export const ghostwritingPackages: GhostwritingPackage[] = [
+  {
+    name: "Basic Package",
+    pages: "50 pages (A5 book)",
+    price: "GHS 5,000",
+    timeline: "3 to 5 months",
+  },
+  {
+    name: "Standard Package",
+    pages: "100 pages (A5 book)",
+    price: "GHS 10,000",
+    timeline: "6 to 8 months",
+  },
+  {
+    name: "Premium Package",
+    pages: "150 pages (A5 book)",
+    price: "GHS 15,000",
+    timeline: "7 to 8 months",
+  },
+  {
+    name: "Extended Premium",
+    pages: "200 pages (A5 book)",
+    price: "GHS 20,000",
+    timeline: "9 to 10 months",
+  },
+  {
+    name: "Comprehensive Package",
+    pages: "250 pages (A5 book)",
+    price: "GHS 25,000",
+    timeline: "9 to 12 months",
+  },
+  {
+    name: "Ultimate Package",
+    pages: "300 pages (A5 book)",
+    price: "GHS 30,000",
+    timeline: "12 months or above",
+  },
+];
+
+export const ghostwritingPackageNote
+  = "Ghostwriting packages include writing, audio transcription, developmental editing, proofreading, ISBN registration and book cover and interior design. A mutual Non-Disclosure Agreement (NDA) is signed before work begins.";
+
 export const serviceProcess: ServiceProcessStep[] = [
   {
     number: "01",
-    title: "Share your idea",
+    title: "Initial Consultation & Outline",
     description:
-      "Tell us where the book is now: an idea, a draft or a finished file. That decides what happens next.",
+      "We begin with a discovery meeting to understand your goals, vision, target audience and tone. We then build a detailed concept outline that acts as the roadmap for your book.",
   },
   {
     number: "02",
-    title: "Get a plan and quote",
+    title: "Research & Content Gathering",
     description:
-      "We confirm the scope, timeline and cost in writing before work begins.",
+      "Through recorded interviews, notes, personal archives and additional subject research, we gather and structure the material while clarifying details collaboratively with you.",
   },
   {
     number: "03",
-    title: "We do the work",
+    title: "Writing & Drafting",
     description:
-      "Writing, editing, design, ISBN and printing, with your approval at each stage.",
+      "Our writers craft the manuscript chapter by chapter according to the agreed outline. You receive regular drafts for review with multiple revision rounds until the voice is right.",
   },
   {
     number: "04",
-    title: "Publish and launch",
+    title: "Editing & Proofreading",
     description:
-      "Your books are delivered, your digital edition goes live, and your launch is supported.",
+      "Your completed manuscript undergoes professional structural editing to improve flow, clarity and narrative arc, followed by thorough proofreading to eliminate any final errors.",
+  },
+  {
+    number: "05",
+    title: "Approval, Design & Printing",
+    description:
+      "Once you approve the final manuscript, we deliver digital and print-ready files, complete cover design and interior layout, manage ISBN registration, and proceed to printing.",
   },
 ];
 
 export const printSpecs: PrintSpec[] = [
   {
-    name: "White bond paper",
-    description: "Clean, classic and cost-effective for most books.",
-    tone: "ivory",
-  },
-  {
-    name: "Creamish bond paper",
-    description: "A natural, durable finish with a premium feel.",
+    name: "Mechanized Bond Paper",
+    description:
+      "High-quality, durable paper with a natural brownish or creamish color. Ideal for creating a unique, professional look.",
     tone: "linen",
   },
   {
-    name: "A5, A4 or custom",
-    description: "Standard book sizes or a trim that suits the content.",
+    name: "Normal Bond Paper",
+    description:
+      "Cost-effective, clean, and classic white paper suitable for most general book and print projects.",
+    tone: "ivory",
+  },
+  {
+    name: "A5, A4 or Custom Sizes",
+    description:
+      "We cater to standard publishing formats like A5 and A4, as well as custom trim dimensions for poetry, art and monographs.",
     tone: "navy",
   },
   {
-    name: "Matte lamination",
-    description: "A smooth, non-glare cover finish.",
+    name: "Matte Lamination",
+    description:
+      "A smooth, non-glare protective cover finish that provides a subtle, sophisticated appearance.",
     tone: "charcoal",
   },
   {
-    name: "Gloss lamination",
-    description: "A bright, reflective cover finish with extra protection.",
+    name: "Gloss Lamination",
+    description:
+      "A shiny, reflective finish that enhances color vibrancy and provides extra protection for your covers.",
     tone: "gold",
   },
   {
-    name: "Perfect or hardcover",
-    description: "Perfect binding for standard runs; hardcover for a premium finish.",
+    name: "Perfect Binding or Hardcover",
+    description:
+      "The choice between clean perfect binding and premium hardcover depending on your budget and reader audience.",
     tone: "espresso",
   },
 ];
 
 export const serviceFaqs: ServiceFaq[] = [
   {
-    label: "How do I start?",
+    label: "How do I start a project with Denva Books?",
     content:
-      "Send a short note about your book, or call us. Tell us where the book is now, whether that is an idea, a manuscript or a finished file, and we will explain the next step.",
+      "Reach out through our contact form, email or WhatsApp. Tell us what you currently have: an idea, a draft or a finished file. We will schedule an introductory discovery conversation and outline the exact next steps.",
   },
   {
-    label: "What if I only have an idea?",
+    label: "What is the difference between an autobiography and a memoir?",
     content:
-      "That is the normal starting point. We can plan the book, interview you, write the manuscript and take it through editing and design.",
+      "An autobiography is a comprehensive, factual and chronological account of your entire life, covering your achievements, challenges and journey. A memoir focuses on a specific period, theme or set of experiences, allowing for deeper reflection on key turning points.",
   },
   {
-    label: "Do I need an ISBN?",
+    label: "What is included in the ghostwriting packages?",
     content:
-      "If you plan to print and sell the book, yes. We can guide you through the requirements and assist with the ISBN process.",
+      "Our ghostwriting packages include comprehensive interviews, audio transcription, manuscript writing, developmental editing, final proofreading, ISBN registration and book design. All work is protected under a strict Non-Disclosure Agreement (NDA).",
   },
   {
-    label: "How much does printing cost?",
+    label: "What is the minimum quantity and turnaround for book printing?",
     content:
-      "It depends on the page count, size, quantity, paper, cover and binding. Our minimum print run is 300 copies, and we quote per project.",
+      "Our minimum print run is 300 copies. Standard printing turnaround ranges from 9 to 15 business days depending on volume and binding specifications. Expedited printing is available for authors with urgent launch deadlines.",
   },
   {
-    label: "Can you publish on Amazon Kindle?",
+    label: "What factors influence printing costs?",
     content:
-      "Yes. You create and verify your own Amazon account, and we assist with the upload and publishing process.",
+      "Printing pricing depends on page count, quantity of copies, book size, paper type (mechanized creamish vs white bond), binding style (perfect binding vs hardcover), and lamination (matte vs gloss). We provide tailored quotes based on your exact specifications.",
   },
   {
-    label: "Do you place books in bookstores?",
+    label: "Can you assist with Amazon Kindle digital publishing?",
     content:
-      "We do not operate a bookstore distribution network. We prepare the book professionally, support digital publishing and marketing, and help with the launch; authors usually approach bookstores themselves.",
+      "Yes. You create and verify your own Amazon KDP account so you retain complete ownership, rights and royalties. Denva Books prepares the formatted digital files, cover specifications and assists with the upload process.",
+  },
+  {
+    label: "Do you distribute books directly to bookstores?",
+    content:
+      "Denva Books does not operate an automatic bookstore distribution network where books are placed in shops automatically. We equip you with professional ISBN registration, print quality, marketing collateral and launch support, while authors coordinate retail distribution directly with bookstores.",
+  },
+  {
+    label: "What is your standard payment structure?",
+    content:
+      "Our standard payment arrangement is a 70% deposit upon project commencement and agreement of scope, with the remaining 30% balance due upon project completion and delivery.",
   },
 ];

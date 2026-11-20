@@ -4,20 +4,27 @@ import { serviceDetails } from "~/data/services";
 
 <template>
   <section
-    id="services"
-    class="bg-default border-default border-b scroll-mt-28"
+    id="services-list"
+    class="bg-default border-default border-b scroll-mt-24"
   >
-    <UContainer class="max-w-7xl">
-      <p class="mt-5 font-serif text-highlighted text-4xl text-balance leading-[1.05]">
-        Services We Offer
-      </p>
+    <UContainer class="py-6 sm:py-8 max-w-7xl">
+      <AppSectionHeading
+        id="services-header"
+        eyebrow="Our Publishing Services"
+        description="Writing, editing, design, ISBN and printing, handled by one team in Accra from the first idea to the finished book."
+        :show-eyebrow="false"
+      >
+        Everything your book needs, <span class="text-accent">in one place.</span>
+      </AppSectionHeading>
 
-      <ServicesDisciplineEntry
-        v-for="(service, index) in serviceDetails"
-        :key="service.slug"
-        :service="service"
-        :index="index"
-      />
+      <div class="mt-4">
+        <ServicesDisciplineEntry
+          v-for="(service, index) in serviceDetails"
+          :key="service.slug"
+          :service="service"
+          :index="index"
+        />
+      </div>
     </UContainer>
   </section>
 </template>

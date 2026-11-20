@@ -11,8 +11,9 @@ useSectionReveal(sectionRef, {
 
 <template>
   <section
+    id="core-values"
     ref="sectionRef"
-    class="bg-default border-default border-b"
+    class="bg-default border-default border-b scroll-mt-24"
   >
     <UContainer class="py-15 max-w-7xl">
       <div class="gap-10 lg:gap-20 grid lg:grid-cols-12">

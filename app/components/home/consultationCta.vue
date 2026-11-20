@@ -20,8 +20,9 @@ useGsapContext(sectionRef, (gsap) => {
 
 <template>
   <section
+    id="consultation"
     ref="sectionRef"
-    class="isolate relative bg-primary-800 overflow-hidden text-primary-50"
+    class="isolate relative bg-primary-800 overflow-hidden text-primary-50 scroll-mt-24"
   >
     <UContainer class="relative py-20 max-w-4xl text-center">
       <p

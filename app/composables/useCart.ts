@@ -42,6 +42,11 @@ export function useCart() {
     lines.value.reduce((total, line) => total + line.price * line.quantity, 0),
   );
 
+  function getQuantity(id: string): number {
+    const line = lines.value.find(item => item.id === id);
+    return line ? line.quantity : 0;
+  }
+
   function add(edition: StoreEdition) {
     const existing = lines.value.find(line => line.id === edition.id);
 
@@ -59,6 +64,18 @@ export function useCart() {
       alt: edition.alt,
       quantity: 1,
     });
+  }
+
+  function decrement(id: string) {
+    const line = lines.value.find(item => item.id === id);
+    if (!line) return;
+
+    if (line.quantity <= 1) {
+      remove(id);
+    }
+    else {
+      line.quantity -= 1;
+    }
   }
 
   function remove(id: string) {
@@ -85,7 +102,9 @@ export function useCart() {
     lines,
     count,
     subtotal,
+    getQuantity,
     add,
+    decrement,
     remove,
     setQuantity,
     clear,

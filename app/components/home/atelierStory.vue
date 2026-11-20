@@ -45,8 +45,9 @@ useGsapContext(sectionRef, (gsap) => {
 
 <template>
   <section
+    id="atelier-process"
     ref="sectionRef"
-    class="bg-default border-default border-b"
+    class="bg-default border-default border-b scroll-mt-24"
   >
     <UContainer class="py-15 max-w-7xl">
       <div class="items-center gap-14 lg:gap-20 grid grid-cols-1 lg:grid-cols-12">

@@ -13,6 +13,7 @@ useSeoMeta({
 <template>
   <div>
     <AppPageHeader
+      id="about-header"
       title="A publishing consultancy"
       accent="in Accra."
       description="One team accountable for the book, from the first idea or manuscript to a finished, printed and published copy."
@@ -27,6 +28,7 @@ useSeoMeta({
     <AboutAtelierSection />
 
     <AppClosingCta
+      id="about-cta"
       eyebrow="Start Your Book"
       title="Tell your story."
       accent="Publish with us."

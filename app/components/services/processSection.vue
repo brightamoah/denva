@@ -11,19 +11,19 @@ useSectionReveal(sectionRef, {
 
 <template>
   <section
-    id="process"
+    id="service-process"
     ref="sectionRef"
-    class="bg-muted/60 border-default border-b scroll-mt-28"
+    class="bg-muted/60 border-default border-b scroll-mt-24"
   >
-    <UContainer class="py-15 max-w-7xl">
+    <UContainer class="py-14 sm:py-16 max-w-7xl">
       <div class="gap-10 lg:gap-20 grid lg:grid-cols-12">
         <div class="lg:col-span-5">
           <AppSectionHeading
             eyebrow="The Process"
-            description="Four steps. You always know what is happening and what comes next."
+            description="A collaborative and confidential roadmap so you always know what is happening and what comes next."
             data-reveal
           >
-            From your idea <span class="text-accent">to a finished book.</span>
+            From your raw ideas <span class="text-accent">to a finished book.</span>
           </AppSectionHeading>
         </div>
 
@@ -39,7 +39,7 @@ useSectionReveal(sectionRef, {
                 {{ step.number }}
               </span>
 
-              <h3 class="mt-2 font-serif font-normal text-highlighted text-2xl tracking-tight">
+              <h3 class="mt-2 font-serif font-normal text-highlighted text-xl sm:text-2xl tracking-tight">
                 {{ step.title }}
               </h3>
 

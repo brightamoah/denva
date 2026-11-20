@@ -11,8 +11,9 @@ useSectionReveal(sectionRef, {
 
 <template>
   <section
+    id="mission-vision"
     ref="sectionRef"
-    class="isolate relative bg-primary-800 overflow-hidden text-primary-50"
+    class="isolate relative bg-primary-800 overflow-hidden text-primary-50 scroll-mt-24"
   >
     <UContainer class="py-16 sm:py-20 max-w-7xl">
       <div class="gap-12 lg:gap-16 grid lg:grid-cols-12">
