@@ -12,15 +12,21 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
+  ui: {
+    colorMode: false,
+  },
+
   app: {
     head: {
       htmlAttrs: { lang: "en" },
       link: [
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous" },
+        // Gotham is self-hosted; preload the face used above the fold.
         {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap",
+          rel: "preload",
+          href: "/fonts/gotham/Gotham-Book.otf",
+          as: "font",
+          type: "font/otf",
+          crossorigin: "anonymous",
         },
       ],
     },

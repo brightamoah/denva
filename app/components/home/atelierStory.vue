@@ -57,7 +57,7 @@ useGsapContext(sectionRef, (gsap) => {
           <div class="bg-muted aspect-4/5 overflow-hidden">
             <NuxtImg
               src="/images/atelier-craft.jpg"
-              alt="Denva Books bookbinding workbench with cotton manuscript pages, fountain pen, and linen swatches"
+              alt="Printed manuscript pages, a pen and bookbinding tools on a workbench"
               width="1200"
               height="896"
               format="webp"
@@ -67,12 +67,12 @@ useGsapContext(sectionRef, (gsap) => {
           </div>
 
           <figcaption class="relative bg-default shadow-sm mx-6 sm:mx-10 -mt-12 p-5 sm:p-6 border border-default">
-            <p class="font-serif font-light text-highlighted text-lg sm:text-xl italic leading-snug">
-              “Paper, thread, and proportion — the quiet architecture of a memory.”
+            <p class="font-serif text-highlighted text-lg sm:text-xl leading-snug">
+              “Publishing should not feel stressful. Our job is to make the next step clear.”
             </p>
 
             <p class="mt-3 font-normal text-[9px] text-muted uppercase tracking-[0.28em]">
-              The Denva Bindery
+              The Denva Books promise
             </p>
           </figcaption>
         </figure>
@@ -86,22 +86,23 @@ useGsapContext(sectionRef, (gsap) => {
               class="bg-secondary w-8 h-px"
               aria-hidden="true"
             />
-            The Atelier Process
+            The Process
           </p>
 
           <h2
             data-atelier-copy
-            class="mt-5 font-serif font-light text-highlighted text-4xl sm:text-5xl text-balance leading-[1.05] tracking-tight"
+            class="mt-5 font-serif text-highlighted text-4xl sm:text-5xl text-balance leading-[1.05] tracking-tight"
           >
-            Unhurried prose. <em class="text-primary italic">Tactile permanence.</em>
+            A clear process, <span class="text-accent">from start to finish.</span>
           </h2>
 
           <p
             data-atelier-copy
-            class="mt-6 max-w-xl font-light text-muted text-sm text-pretty leading-relaxed"
+            class="mt-6 max-w-xl font-normal text-muted text-sm text-pretty leading-relaxed"
           >
-            Whether authoring a public cultural statement or a confidential family history, our
-            writers and master bookbinders collaborate with quiet precision.
+            You do not need to understand publishing before you begin. Tell us where your book is
+            now, whether that is an idea, a manuscript or a finished file, and we will explain the
+            next step.
           </p>
 
           <ol
@@ -113,16 +114,16 @@ useGsapContext(sectionRef, (gsap) => {
               :key="stage.title"
               class="gap-4 sm:gap-6 grid grid-cols-[2.5rem_1fr] sm:grid-cols-[3.25rem_1fr] py-5 border-default border-b"
             >
-              <span class="font-serif font-light text-secondary-700 dark:text-secondary-300 text-lg italic leading-none">
+              <span class="font-serif text-secondary text-lg leading-none">
                 {{ stage.numeral }}
               </span>
 
               <div class="min-w-0">
-                <h3 class="font-serif font-light text-highlighted text-xl sm:text-2xl tracking-tight">
+                <h3 class="font-serif text-highlighted text-xl sm:text-2xl tracking-tight">
                   {{ stage.title }}
                 </h3>
 
-                <p class="mt-1.5 max-w-lg font-light text-muted text-sm text-pretty leading-relaxed">
+                <p class="mt-1.5 max-w-lg font-normal text-muted text-sm text-pretty leading-relaxed">
                   {{ stage.description }}
                 </p>
               </div>
@@ -134,12 +135,12 @@ useGsapContext(sectionRef, (gsap) => {
             class="mt-9"
           >
             <UButton
-              label="Inside the atelier"
+              label="More about Denva"
               to="/about"
               color="neutral"
               variant="outline"
               trailing-icon="i-lucide-arrow-right"
-              class="px-6 rounded-none min-h-11 font-light text-[10px] uppercase tracking-[0.24em] cursor-pointer"
+              class="px-6 rounded-none min-h-11 font-normal text-[10px] uppercase tracking-[0.24em] cursor-pointer"
             />
           </div>
         </div>

@@ -28,116 +28,126 @@ export interface EditorialQuote {
   context: string;
 }
 
+/**
+ * The homepage hero describes what Denva actually does, in the order most
+ * clients meet the service: writing first, then editorial and design, then
+ * printing and publishing.
+ */
 export const heroSlides: HeroSlide[] = [
   {
     src: "/images/hero-athena.jpg",
-    alt: "Bespoke linen-bound hardcover books and brass fountain pen on travertine desk",
+    alt: "A stack of printed hardcover books and a fountain pen on a desk",
     index: "I",
-    title: "Heirloom Editions",
-    caption: "Hand-sewn Belgian linen & blind-debossed 24kt gold foil",
+    title: "Writing & Ghostwriting",
+    caption: "From your idea, notes or recordings to a finished manuscript",
   },
   {
     src: "/images/atelier-craft.jpg",
-    alt: "Cotton manuscript sheets, vintage fountain pen, and bookbinding tools on walnut bench",
+    alt: "Printed manuscript pages, a pen and bookbinding tools on a workbench",
     index: "II",
-    title: "Private Ghostwriting",
-    caption: "Confidential literary capture on archival cotton rag",
+    title: "Editing & Book Design",
+    caption: "Manuscript review, editing, proofreading, cover and interior layout",
   },
   {
     src: "/images/book-monograph.jpg",
-    alt: "Deep emerald cloth collector monograph resting on dark slate",
+    alt: "A cloth-bound book resting on a dark surface",
     index: "III",
-    title: "Collector Monographs",
-    caption: "Museum-grade color separation & Swiss lay-flat bindings",
+    title: "Printing & Publishing",
+    caption: "ISBN assistance, quality book printing and launch support",
   },
 ];
 
 export const marqueeItems = [
-  "Confidential Ghostwriting",
-  "Private Memoirs",
-  "Architectural Monographs",
-  "Heirloom Bindery",
-  "Archival Letterpress",
-  "Global Distribution",
-  "Family Chronicles",
+  "Ghostwriting",
+  "Editing & Proofreading",
+  "Cover Design",
+  "Interior Layout",
+  "ISBN Assistance",
+  "Book Printing",
+  "Kindle Publishing",
+  "Book Launch Support",
 ];
 
+/**
+ * Book types Denva works with. These replace the invented "editions"
+ * catalogue with the real categories the team publishes.
+ */
 export const editions: EditionItem[] = [
   {
-    title: "The Geneva Notebooks",
-    category: "Private Memoir",
-    specification: "Belgian Ivory Linen · Edition of 150",
+    title: "Autobiography & Memoir",
+    category: "Life Stories",
+    specification: "Interviews · Writing · Editing · Printing",
     image: "/images/book-memoir.jpg",
-    alt: "Ivory linen-bound bespoke memoir resting on a travertine plinth",
-    to: "/store",
+    alt: "A light-coloured hardcover book resting on a stone surface",
+    to: "/services",
   },
   {
-    title: "Form & Limestone",
-    category: "Architectural Monograph",
-    specification: "Emerald Cloth · Swiss-Bound",
+    title: "Business & Non-Fiction",
+    category: "Ideas & Expertise",
+    specification: "Structure · Editing · Cover Design · ISBN",
     image: "/images/book-monograph.jpg",
-    alt: "Deep teal cloth collector monograph on dark slate",
-    to: "/store",
+    alt: "A dark cloth-bound book photographed on a dark surface",
+    to: "/services",
   },
   {
-    title: "Four Generations in Kyoto",
-    category: "Legacy Chronicle",
-    specification: "Hand-Bound Espresso Calfskin · Gilt Edges",
+    title: "Novels & Poetry",
+    category: "Fiction & Verse",
+    specification: "Review · Editing · Layout · Printing",
     image: "/images/book-chronicle.jpg",
-    alt: "Espresso leather-bound heirloom chronicle with gilt page edges",
-    to: "/store",
+    alt: "A leather-bound book with gilt page edges",
+    to: "/services",
   },
   {
-    title: "Essays on Quiet Permanence",
-    category: "Literary Edition",
-    specification: "Charcoal Buckram & Custom Slipcase",
+    title: "Faith & Ministry",
+    category: "Churches & Church Leaders",
+    specification: "Editing · Design · Printing · Launch Support",
     image: "/images/book-edition.jpg",
-    alt: "Charcoal linen literary edition inside a custom slipcase",
-    to: "/store",
+    alt: "A charcoal-bound book presented inside a slipcase",
+    to: "/services",
   },
 ];
 
 export const services: ServiceItem[] = [
   {
     number: "01",
-    title: "Confidential Ghostwriting",
+    title: "Writing & Ghostwriting",
     summary:
-      "Intimate recorded dialogues with seasoned literary biographers who capture your exact voice under strict NDA.",
+      "Autobiographies, memoirs, business books, novels and non-fiction, written with you and in your voice.",
     to: "/services",
   },
   {
     number: "02",
-    title: "Developmental & Line Editing",
+    title: "Manuscript Review, Editing & Proofreading",
     summary:
-      "Structural architecture, archival verification, and exacting prose refinement to literary house standards.",
+      "A five-area manuscript review, followed by editing and proofreading that make the book clear and readable.",
     to: "/services",
   },
   {
     number: "03",
-    title: "Heirloom Design & Bindery",
+    title: "Cover Design & Interior Layout",
     summary:
-      "Custom serif typography, Belgian bookcloth, Italian calfskin, foil stamping, and hand-crafted slipcases.",
+      "Cover development, page layout, formatting and print-ready files prepared to professional standards.",
     to: "/services",
   },
   {
     number: "04",
-    title: "Global Publishing & Imprint",
+    title: "ISBN & Pre-press",
     summary:
-      "ISBN imprint stewardship, museum and fine bookshop placement, international press, and rights management.",
+      "ISBN assistance, digital publishing preparation and the final checks a book needs before it goes to print.",
     to: "/services",
   },
   {
     number: "05",
-    title: "Private Family Chronicles",
+    title: "Book Printing",
     summary:
-      "Multi-generational histories and photographic archives produced in strictly limited private runs.",
+      "High-quality digital printing from 300 copies, on white or creamish bond paper, with matte or gloss covers.",
     to: "/services",
   },
   {
     number: "06",
-    title: "Art & Collector Monographs",
+    title: "Book Launch & Marketing",
     summary:
-      "Museum-grade color separation, 150gsm cotton paper, and lay-flat Smyth-sewn bindings for galleries and studios.",
+      "Launch planning, promotional materials and practical marketing support, including Amazon Kindle assistance.",
     to: "/services",
   },
 ];
@@ -149,39 +159,49 @@ export interface AtelierStage {
 
 export const atelierStages: AtelierStage[] = [
   {
-    title: "I. The Private Dialogue",
+    title: "01. The Conversation",
     description:
-      "Across unhurried conversations, your dedicated ghostwriter distills decades of insight and lived memory in strict confidence.",
+      "We start by understanding where your book is now: an idea, a manuscript or a finished file. Then we agree what needs to happen next.",
   },
   {
-    title: "II. The Literary Manuscript",
+    title: "02. The Manuscript",
     description:
-      "Chapter by chapter, senior editors shape cadence, structure, and historical precision until every sentence reads effortlessly as yours.",
+      "Interviews, transcription, writing, editing and proofreading are shaped chapter by chapter, with your feedback at every stage.",
   },
   {
-    title: "III. The Heirloom Object",
+    title: "03. The Printed Book",
     description:
-      "European binderies finish each volume in tactile linen, archival cotton rag, and custom slipcases made to endure generations.",
+      "Cover, layout, ISBN and printing come together, followed by launch support if you want to take the book further.",
   },
 ];
 
+/**
+ * Real statements taken from Denva's stated core values. These are company
+ * commitments, not invented client testimonials.
+ */
 export const editorialNotes: EditorialQuote[] = [
   {
     quote:
-      "A great book does not merely record a life or a body of work—it gives permanence to the voice behind it, long after the room has emptied.",
-    attribution: "Editorial Charter",
-    context: "Denva Books · On Literary Permanence",
+      "We are committed to delivering world-class publishing services and advisory support, maintaining the highest standards of quality.",
+    attribution: "Excellence",
+    context: "Denva Books · Our Core Values",
   },
   {
     quote:
-      "True discretion is the quiet foundation of great ghostwriting: the finest pages never reveal the hand that helped transcribe them.",
-    attribution: "Private Commissions",
-    context: "Denva Books · On Confidentiality",
+      "We place a high value on understanding your needs and exceeding your expectations, keeping the process simple and stress-free.",
+    attribution: "Customer-Centric",
+    context: "Denva Books · Our Core Values",
   },
   {
     quote:
-      "Paper weight, thread tension, and typographic proportion are never ornament—they are the architecture through which thought is felt.",
-    attribution: "The Bindery",
-    context: "Denva Books · On Material Craft",
+      "We value creative thinking and encourage innovative approaches in every part of our work, constantly looking for better ways to support authors.",
+    attribution: "Creativity & Innovation",
+    context: "Denva Books · Our Core Values",
+  },
+  {
+    quote:
+      "We treat every author with fairness, dignity and respect, and take ownership of the work from the first conversation to the finished book.",
+    attribution: "Respect & Accountability",
+    context: "Denva Books · Our Core Values",
   },
 ];

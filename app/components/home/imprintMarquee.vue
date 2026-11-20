@@ -3,7 +3,7 @@ import { marqueeItems } from "~/data/home";
 </script>
 
 <template>
-  <div class="bg-primary-950 py-4 border-primary-50/10 border-t text-primary-100">
+  <div class="bg-primary-800 py-4 border-primary-50/10 border-t text-primary-100">
     <UMarquee
       pause-on-hover
       :repeat="4"
@@ -18,13 +18,13 @@ import { marqueeItems } from "~/data/home";
         :key="label"
         class="inline-flex items-center gap-12"
       >
-        <span class="font-serif font-light text-primary-100 text-base tracking-wide whitespace-nowrap">
+        <span class="font-serif font-normal text-primary-100 text-base tracking-wide whitespace-nowrap">
           {{ label }}
         </span>
 
         <span
           aria-hidden="true"
-          class="bg-secondary/50 w-px h-3"
+          class="bg-secondary w-0.5 h-3"
         />
       </div>
     </UMarquee>

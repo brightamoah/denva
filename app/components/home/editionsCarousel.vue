@@ -50,12 +50,17 @@ useGsapContext(sectionRef, (gsap) => {
               class="bg-secondary w-8 h-px"
               aria-hidden="true"
             />
-            Selected Editions
+            What We Publish
           </p>
 
-          <h2 class="mt-5 font-serif font-light text-highlighted text-4xl sm:text-5xl lg:text-6xl text-balance leading-[1.05] tracking-tight">
-            Editions crafted to <em class="text-primary italic">endure.</em>
+          <h2 class="mt-5 font-serif text-highlighted text-4xl sm:text-5xl lg:text-6xl text-balance leading-[1.05] tracking-tight">
+            Your book, <span class="text-primary">whatever its genre.</span>
           </h2>
+
+          <p class="mt-5 max-w-2xl font-normal text-muted text-sm sm:text-base text-pretty leading-relaxed">
+            From a first autobiography to a business book or a collection of poems, every project
+            gets the same editorial care and the same attention to the finished book.
+          </p>
         </div>
       </div>
 
@@ -120,8 +125,8 @@ useGsapContext(sectionRef, (gsap) => {
                   class="absolute inset-0 bg-linear-to-t from-primary-950/75 via-primary-950/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 />
 
-                <span class="bottom-4 left-4 absolute flex items-center gap-2 opacity-0 group-hover:opacity-100 font-light text-[10px] text-primary-50 uppercase tracking-[0.26em] transition-[opacity,transform] translate-y-1 group-hover:translate-y-0 duration-500">
-                  View edition
+                <span class="bottom-4 left-4 absolute flex items-center gap-2 opacity-0 group-hover:opacity-100 font-normal text-[10px] text-primary-50 uppercase tracking-[0.26em] transition-[opacity,transform] translate-y-1 group-hover:translate-y-0 duration-500">
+                  See how we help
                   <UIcon
                     name="i-lucide-arrow-right"
                     class="size-3.5"
@@ -136,7 +141,7 @@ useGsapContext(sectionRef, (gsap) => {
                     {{ item.category }}
                   </p>
 
-                  <h3 class="mt-1.5 font-serif font-light text-highlighted group-hover:text-primary text-xl sm:text-2xl tracking-tight transition-colors duration-300">
+                  <h3 class="mt-1.5 font-serif font-normal text-highlighted group-hover:text-primary text-xl sm:text-2xl tracking-tight transition-colors duration-300">
                     {{ item.title }}
                   </h3>
                 </div>
@@ -148,7 +153,7 @@ useGsapContext(sectionRef, (gsap) => {
                 />
               </div>
 
-              <!-- <p class="mt-2 font-light text-muted text-xs leading-relaxed">
+              <!-- <p class="mt-2 font-normal text-muted text-xs leading-relaxed">
                 {{ item.specification }}
               </p> -->
             </article>

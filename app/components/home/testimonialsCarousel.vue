@@ -43,7 +43,7 @@ useGsapContext(sectionRef, (gsap) => {
         </span>
 
         <p class="relative font-normal text-[10px] text-muted uppercase tracking-[0.34em]">
-          The Denva Charter
+          Our Core Values
         </p>
 
         <div class="relative mt-8 pb-12">
@@ -59,7 +59,7 @@ useGsapContext(sectionRef, (gsap) => {
             }"
           >
             <figure class="mx-auto px-2 sm:px-6 max-w-3xl">
-              <blockquote class="font-serif font-light text-highlighted lg:text-[2.6rem] text-2xl sm:text-3xl italic text-balance leading-snug">
+              <blockquote class="font-serif text-highlighted text-2xl sm:text-3xl lg:text-4xl text-balance leading-snug">
                 {{ item.quote }}
               </blockquote>
 
@@ -73,7 +73,7 @@ useGsapContext(sectionRef, (gsap) => {
                   {{ item.attribution }}
                 </span>
 
-                <span class="mt-2 font-light text-muted text-xs">
+                <span class="mt-2 font-normal text-muted text-xs">
                   {{ item.context }}
                 </span>
               </figcaption>

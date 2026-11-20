@@ -3,7 +3,7 @@ export default defineAppConfig({
     colors: {
       primary: "denva-blue",
       secondary: "denva-orange",
-      // neutral: "neutral",
+      neutral: "zinc",
     },
     slideover: {
       slots: {

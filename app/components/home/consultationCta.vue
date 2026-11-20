@@ -21,25 +21,18 @@ useGsapContext(sectionRef, (gsap) => {
 <template>
   <section
     ref="sectionRef"
-    class="isolate relative bg-primary-950 overflow-hidden text-primary-50"
+    class="isolate relative bg-primary-800 overflow-hidden text-primary-50"
   >
-    <span
-      aria-hidden="true"
-      class="hidden lg:block top-1/2 -right-10 absolute font-serif font-light text-[22rem] text-primary-50/5 leading-none -translate-y-1/2 pointer-events-none select-none"
-    >
-      XII
-    </span>
-
     <UContainer class="relative py-20 max-w-4xl text-center">
       <p
         data-cta-wrap
-        class="flex justify-center items-center gap-3 font-normal text-[10px] text-secondary-300 uppercase tracking-[0.34em]"
+        class="flex justify-center items-center gap-3 font-normal text-[10px] text-secondary uppercase tracking-[0.34em]"
       >
         <span
           class="bg-secondary w-8 h-px"
           aria-hidden="true"
         />
-        Private Commissions
+        Start Your Book
         <span
           class="bg-secondary w-8 h-px"
           aria-hidden="true"
@@ -48,17 +41,17 @@ useGsapContext(sectionRef, (gsap) => {
 
       <h2
         data-cta-wrap
-        class="mt-6 font-serif font-light text-primary-50 text-4xl sm:text-5xl lg:text-6xl text-balance leading-[1.05] tracking-tight"
+        class="mt-6 font-serif text-primary-50 text-4xl sm:text-5xl lg:text-6xl text-balance leading-[1.05] tracking-tight"
       >
-        Begin your manuscript <em class="text-secondary-300 italic">in confidence.</em>
+        Ready to publish? <span class="text-secondary">Let's talk.</span>
       </h2>
 
       <p
         data-cta-wrap
-        class="mx-auto mt-6 max-w-xl font-light text-primary-100/70 text-sm sm:text-base text-pretty leading-relaxed"
+        class="mx-auto mt-6 max-w-xl font-normal text-primary-100/80 text-sm sm:text-base text-pretty leading-relaxed"
       >
-        Denva Books accepts twelve bespoke publishing and ghostwriting commissions each year.
-        Arrange an introductory dialogue with our Managing Editorial Partner.
+        Tell us what you have, whether that is an idea, a manuscript or a finished file, and what
+        you want the book to do. We will explain the next step and give you a clear quote.
       </p>
 
       <div
@@ -66,12 +59,12 @@ useGsapContext(sectionRef, (gsap) => {
         class="flex justify-center mt-10"
       >
         <UButton
-          label="Arrange a private consultation"
+          label="Get a quote"
           to="/contact"
           color="secondary"
           variant="solid"
           trailing-icon="i-lucide-arrow-right"
-          class="hover:bg-secondary-400 active:bg-secondary-400 px-9 rounded-none focus-visible:outline-3 focus-visible:outline-secondary-100 min-h-12 font-medium text-[11px] text-primary-950 uppercase tracking-[0.24em] cursor-pointer"
+          class="px-9 rounded-none focus-visible:outline-3 focus-visible:outline-secondary-100 min-h-12 font-medium text-[11px] text-primary-950 uppercase tracking-[0.24em] cursor-pointer"
         />
       </div>
     </UContainer>

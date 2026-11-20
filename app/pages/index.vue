@@ -1,8 +1,12 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "Denva Books · Luxury Book Publishing & Ghostwriting Atelier",
+  title: "Denva Books · Your Stress-Free Publishing Partner in Accra",
   description:
-    "A private luxury publishing house and literary atelier crafting confidential ghostwritten memoirs, architectural monographs, and heirloom hardcover editions.",
+    "Denva Books helps authors and businesses turn ideas and manuscripts into professionally edited, designed, printed and published books. Ghostwriting, editing, cover design, ISBN, printing and launch support from Accra, Ghana.",
+  ogTitle: "Denva Books · Your Stress-Free Publishing Partner",
+  ogDescription:
+    "Writing, editing, book design, ISBN, printing and launch support for authors and businesses in Ghana and beyond.",
+  ogType: "website",
 });
 </script>
 

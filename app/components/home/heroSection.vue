@@ -25,13 +25,13 @@ const activeSlide = computed(() => heroSlides[activeIndex.value] ?? heroSlides[0
 
 const links: ButtonProps[] = [
   {
-    label: "Start your story",
+    label: "Start your book",
     to: "/contact",
     color: "secondary",
     variant: "solid",
     trailingIcon: "i-lucide-arrow-right",
     class:
-      "min-h-12 rounded-none px-8 text-[11px] font-medium uppercase tracking-[0.24em] text-primary-950 hover:bg-secondary-400 active:bg-secondary-400 focus-visible:outline-3 focus-visible:outline-secondary-100",
+      "min-h-12 rounded-none px-8 text-[11px] font-medium uppercase tracking-[0.24em] text-primary-950  active:bg-secondary-400 focus-visible:outline-3 focus-visible:outline-secondary-100",
   },
   {
     label: "Explore our services",
@@ -39,7 +39,7 @@ const links: ButtonProps[] = [
     color: "primary",
     variant: "outline",
     class:
-      "min-h-12 rounded-none px-8 text-[11px] font-light uppercase tracking-[0.24em] text-primary-50 ring-1 ring-inset ring-primary-50/30 hover:bg-primary-50/10 hover:text-primary-50 hover:ring-primary-50/60 focus-visible:ring-primary-50",
+      "min-h-12 rounded-none px-8 text-[11px] font-normal uppercase tracking-[0.24em] text-primary-50 ring-1 ring-inset ring-primary-50/30 hover:bg-primary-50/10 hover:text-primary-50 hover:ring-primary-50/60 focus-visible:ring-primary-50",
   },
 ];
 
@@ -147,45 +147,46 @@ useGsapContext(heroRef, (gsap) => {
     <!-- Cinematic scrim, tinted with the house blue -->
     <div
       aria-hidden="true"
-      class="-z-10 absolute inset-0 bg-primary-950/45 pointer-events-none"
+      class="-z-10 absolute inset-0 bg-primary-800/45 pointer-events-none"
     />
 
     <div
       aria-hidden="true"
-      class="-z-10 absolute inset-0 bg-linear-to-t from-primary-950 via-primary-950/45 to-primary-950/15 pointer-events-none"
+      class="-z-10 absolute inset-0 bg-linear-to-t from-primary-800 via-primary-800/45 to-primary-800/15 pointer-events-none"
     />
 
     <div
       aria-hidden="true"
-      class="-z-10 absolute inset-0 bg-linear-to-r from-primary-950/85 via-primary-950/30 to-transparent pointer-events-none"
+      class="-z-10 absolute inset-0 bg-linear-to-r from-primary-800/85 via-primary-800/30 to-transparent pointer-events-none"
     />
 
     <div class="z-10 relative flex flex-col flex-1 justify-end lg:justify-center mx-auto px-4 sm:px-6 pt-0 lg:pt-24 w-full max-w-7xl">
       <div class="pb-14 lg:pb-24 max-w-3xl">
-        <h1 class="mt-7 font-serif font-light text-[2.9rem] text-primary-50 xl:text-[5.4rem] sm:text-6xl lg:text-7xl text-balance leading-[0.98] tracking-[-0.015em]">
+        <h1 class="mt-7 font-sans font-medium text-[2.9rem] text-primary-50 xl:text-[5.4rem] sm:text-6xl lg:text-7xl text-balance leading-[0.98] tracking-[-0.015em]">
           <span class="block pb-1">
             <span
               data-hero-line
               class="block"
-            >Stories Worth Keeping.</span>
+            >Tell your story.</span>
           </span>
 
           <span class="block pb-2 overflow-hidden">
             <span
               data-hero-line
-              class="block text-secondary-300 italic"
+              class="block text-secondary"
             >
-              Bound for Centuries.
+              Publish with us.
             </span>
           </span>
         </h1>
 
         <p
           data-hero-fade
-          class="mt-7 max-w-xl font-light text-primary-50/80 text-base sm:text-lg text-pretty leading-relaxed"
+          class="mt-7 max-w-xl font-normal text-primary-50/85 text-base sm:text-lg text-pretty leading-relaxed"
         >
-          Confidential ghostwriting, editorial direction, and heirloom hardcover publishing for
-          founders, collectors, and cultural houses.
+          Denva Books is your stress-free publishing partner in Accra, Ghana. We help authors and
+          businesses turn ideas and manuscripts into professionally edited, designed, printed and
+          published books.
         </p>
 
         <div
@@ -202,17 +203,17 @@ useGsapContext(heroRef, (gsap) => {
     </div>
 
     <!-- Plate register -->
-    <div class="z-10 relative bg-primary-950/25 backdrop-blur-[2px] border-primary-50/15 border-t">
+    <div class="z-10 relative bg-primary-800/25 backdrop-blur-[2px] border-primary-50/15 border-t">
       <div class="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-5 mx-auto px-4 sm:px-6 py-5 w-full max-w-7xl">
         <div
           data-hero-fade
           class="max-w-md"
         >
-          <p class="font-light text-[10px] text-primary-50/75 uppercase tracking-[0.3em]">
+          <p class="font-normal text-[10px] text-primary-50/75 uppercase tracking-[0.3em]">
             {{ activeSlide.title }}
           </p>
 
-          <p class="mt-2 font-serif font-light text-primary-50/90 text-lg">
+          <p class="mt-2 font-serif font-normal text-primary-50/90 text-lg">
             {{ activeSlide.caption }}
           </p>
         </div>

@@ -2,6 +2,7 @@
 import type { NavigationMenuItem } from "@nuxt/ui";
 
 const route = useRoute();
+const { count } = useCart();
 
 const items = computed<NavigationMenuItem[]>(() => [
   {
@@ -10,28 +11,26 @@ const items = computed<NavigationMenuItem[]>(() => [
     active: route.path === "/",
   },
   {
-    label: "Our Services",
+    label: "Services",
     to: "/services",
     active: route.path.startsWith("/services"),
   },
   {
-    label: "Shop",
+    label: "Store",
     to: "/store",
     active: route.path.startsWith("/store"),
   },
   {
-    label: "About Us",
+    label: "About",
     to: "/about",
     active: route.path.startsWith("/about"),
   },
   {
-    label: "Contact Us",
+    label: "Contact",
     to: "/contact",
     active: route.path.startsWith("/contact"),
   },
 ]);
-
-const isStoreRoute = computed(() => route.path.startsWith("/store"));
 
 const scrolled = ref(false);
 
@@ -81,19 +80,21 @@ const headerToggle = computed(() => ({
       <div class="flex items-center gap-2 min-w-0">
         <NuxtImg
           src="/images/logo.png"
-          alt="logo"
+          alt=""
+          width="128"
+          height="128"
           class="size-10 sm:size-16 object-contain transition-[width,height] duration-500 shrink-0"
           :class="scrolled ? 'sm:size-12' : 'sm:size-16'"
         />
 
         <p class="min-w-0 leading-none">
           <span
-            class="block font-serif font-semibold text-primary truncate uppercase transition-[font-size,letter-spacing] duration-500"
+            class="block font-sans font-semibold text-primary dark:text-primary-100 truncate uppercase transition-[font-size,letter-spacing] duration-500"
             :class="scrolled
               ? 'text-sm tracking-[0.18em] sm:text-base sm:tracking-[0.26em]'
               : 'text-base tracking-[0.16em] sm:text-xl sm:tracking-[0.26em]'"
           >
-            Denva <span class="text-secondary">Books</span>
+            Denva <span class="text-accent">Books</span>
           </span>
         </p>
       </div>
@@ -106,46 +107,39 @@ const headerToggle = computed(() => ({
       color="primary"
       class="mx-auto"
       :ui="{
-        link: 'px-3 text-xs font-light uppercase tracking-[0.2em] transition-colors duration-300 hover:text-highlighted after:-bottom-1',
+        link: 'px-3 text-xs font-normal uppercase tracking-[0.2em] transition-colors duration-300 hover:text-highlighted after:-bottom-1',
         list: 'gap-2',
       }"
     />
 
     <template #right>
-      <div class="flex items-center gap-3 shrink-0">
-        <div v-if="isStoreRoute">
-          <UChip
-            v-auto-animate
-            inset
-            size="3xl"
-            text="17"
-            color="secondary"
-            :ui="{
-              base: 'text-[10px] text-center size-4',
-            }"
+      <div
+        v-auto-animate
+        class="flex items-center gap-3 shrink-0"
+      >
+        <UButton
+          to="/store/cart"
+          color="neutral"
+          variant="ghost"
+          icon="i-lucide:shopping-cart"
+          :aria-label="count > 0 ? `View cart, ${count} items` : 'View cart'"
+          class="relative justify-center rounded-none size-9 cursor-pointer"
+        >
+          <span
+            v-if="count > 0"
+            class="top-1 right-1 absolute flex justify-center items-center bg-secondary px-1 rounded-full min-w-4 h-4 font-medium tabular-nums text-[9px] text-primary-950"
+            aria-hidden="true"
           >
-            <UButton
-              v-auto-animate
-              icon="i-lucide:shopping-cart"
-              variant="link"
-              color="neutral"
-              to="/store/cart"
-            />
-          </UChip>
-        </div>
+            {{ count }}
+          </span>
+        </UButton>
 
         <UButton
-          label="Book A Meeting"
+          label="Get a quote"
           to="/contact"
           color="secondary"
           variant="outline"
-          class="hidden sm:inline-flex hover:bg-secondary/10 px-4 rounded-none ring-secondary/40 min-h-9 font-normal text-[10px] text-secondary uppercase tracking-[0.22em] cursor-pointer"
-        />
-
-        <UColorModeButton
-          color="neutral"
-          variant="link"
-          class="rounded-none text-muted hover:text-highlighted"
+          class="hidden xl:inline-flex px-4 rounded-none min-h-9 font-normal text-[10px] uppercase tracking-[0.22em] cursor-pointer"
         />
       </div>
     </template>
@@ -164,13 +158,20 @@ const headerToggle = computed(() => ({
           {{ item.label }}
         </NuxtLink>
 
+        <NuxtLink
+          to="/store/cart"
+          class="block hover:bg-elevated px-4 py-3 border-transparent border-l-2 font-medium text-muted hover:text-highlighted text-sm uppercase tracking-[0.2em] transition-colors duration-200"
+        >
+          Cart{{ count > 0 ? ` (${count})` : "" }}
+        </NuxtLink>
+
         <UButton
-          label="Book A Meeting"
+          label="Get a quote"
           to="/contact"
           color="secondary"
           block
           trailing-icon="i-lucide-arrow-right"
-          class="mt-6 rounded-none min-h-11 text-[10px] uppercase tracking-[0.26em]"
+          class="mt-6 rounded-none min-h-11 text-[10px] text-primary-950 uppercase tracking-[0.26em]"
         />
       </div>
     </template>
